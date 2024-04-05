@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shopes_navigation"
+    app:startDestination="@id/restaurentFragment">
+
+    <fragment
+        android:id="@+id/restaurentFragment"
+        android:name="com.example.fepper.RestaurentFragment"
+        android:label="fragment_restaurent"
+        tools:layout="@layout/fragment_restaurent" />
+    <fragment
+        android:id="@+id/bakesFragment"
+        android:name="com.example.fepper.BakesFragment"
+        android:label="fragment_bakes"
+        tools:layout="@layout/fragment_bakes" />
+    <fragment
+        android:id="@+id/pureVegFregment"
+        android:name="com.example.fepper.PureVegFregment"
+        android:label="fragment_pure_veg_fregment"
+        tools:layout="@layout/pure_veg_fregment" />
+    <fragment
+        android:id="@+id/iceCreamFragment"
+        android:name="com.example.fepper.IceCreamFragment"
+        android:label="fragment_ice_cream"
+        tools:layout="@layout/fragment_ice_cream" />
+    <fragment
+        android:id="@+id/homeChefFragment"
+        android:name="com.example.fepper.HomeChefFragment"
+        android:label="fragment_home_chef"
+        tools:layout="@layout/fragment_home_chef" />
+</navigation>

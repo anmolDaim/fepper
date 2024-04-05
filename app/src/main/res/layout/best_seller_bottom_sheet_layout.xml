@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_250"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bestImageView"
+            android:layout_width="@dimen/widget_size_150"
+            android:layout_height="@dimen/widget_size_150"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/vegImageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/bestImageView"
+            app:layout_constraintTop_toTopOf="@+id/bestImageView"
+            app:srcCompat="@drawable/nonveg_icon" />
+
+        <TextView
+            android:id="@+id/bestNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Malai Kabab"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintStart_toStartOf="@+id/vegImageView"
+            app:layout_constraintTop_toBottomOf="@+id/vegImageView" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="ROYAL DINE"
+            android:textSize="@dimen/font_size_13"
+            app:layout_constraintStart_toStartOf="@+id/bestNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/bestNameTextView" />
+
+        <TextView
+            android:id="@+id/bestPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="200"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bestImageView"
+            app:layout_constraintStart_toStartOf="@+id/bestImageView"
+            app:layout_constraintTop_toBottomOf="@+id/bestImageView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/AddToCartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/white_btn"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/bestPriceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bestPriceTextView" />
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_cancel_24" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="Rs "
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_15"
+            app:layout_constraintBottom_toBottomOf="@+id/bestPriceTextView"
+            app:layout_constraintEnd_toStartOf="@+id/bestPriceTextView"
+            app:layout_constraintTop_toTopOf="@+id/bestPriceTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

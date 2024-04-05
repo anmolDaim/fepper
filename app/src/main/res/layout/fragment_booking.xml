@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".BookingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/black">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Booking"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="@dimen/font_size_17"/>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/toolbar_image"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:src="@drawable/your_image" />-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+    <ImageView
+        android:id="@+id/orderImage"
+        android:layout_width="@dimen/widget_size_300"
+        android:layout_height="@dimen/widget_size_300"
+        android:layout_marginTop="84dp"
+        android:visibility="gone"
+        android:src="@drawable/bookingimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/orderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No orders yet"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/font_size_17"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/orderImage"
+        app:layout_constraintStart_toStartOf="@+id/orderImage"
+        app:layout_constraintTop_toBottomOf="@+id/orderImage" />
+
+    <TextView
+        android:id="@+id/orderTitle"
+        android:layout_width="@dimen/widget_size_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="We are waiting for to place your first order. Start adding to your basket"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_12"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/darkGrey"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/orderText"
+        app:layout_constraintStart_toStartOf="@+id/orderText"
+        app:layout_constraintTop_toBottomOf="@+id/orderText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/orderBtn"
+        android:layout_width="@dimen/widget_size_300"
+        android:layout_height="@dimen/widget_size_50"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/order_btn"
+        android:text="Start Ordering"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintEnd_toEndOf="@+id/orderTitle"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="@+id/orderTitle"
+        app:layout_constraintTop_toBottomOf="@+id/orderTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+tools:listitem="@layout/booked_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

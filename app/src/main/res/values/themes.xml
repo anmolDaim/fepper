@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Fepper" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/actionBar</item>
+    </style>
+
+    <style name="Theme.Fepper" parent="Base.Theme.Fepper" />
+    <style name="Widget.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:theme">@style/NoRippleTheme</item>
+    </style>
+    <style name="NoRippleTheme">
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_background</item> <!-- Set the background drawable -->
+        <item name="android:windowMinWidthMajor">70%</item> <!-- Set the width of the dialog -->
+        <item name="android:windowMinWidthMinor">70%</item> <!-- Set the width of the dialog -->
+    </style>
+</resources>
